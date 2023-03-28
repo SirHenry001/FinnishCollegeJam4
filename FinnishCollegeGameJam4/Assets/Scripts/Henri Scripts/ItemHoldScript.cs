@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ItemHoldScript : MonoBehaviour
 {
@@ -13,7 +14,15 @@ public class ItemHoldScript : MonoBehaviour
     [SerializeField] private float pickupRange = 5.0f;
     [SerializeField] private float pickupForce = 150.0f;
 
-    public StarterAssets.StarterAssetsInputs inputs;
+    public bool placeObj;
+
+    public GameObject placement1;
+    public GameObject placement2;
+    public GameObject placement3;
+
+    [SerializeField] private InputActionReference leftClick, rightClick;
+
+    public LayerMask layerMask;
 
     private void Update()
     {
@@ -22,9 +31,9 @@ public class ItemHoldScript : MonoBehaviour
             if(heldObj == null)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward),out hit, pickupRange))
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward),out hit, pickupRange, layerMask))
                 {
-                    if(inputs.click)
+                    if(leftClick.action.IsPressed())
                     {
                         PickupObject(hit.transform.gameObject);
                         Debug.Log(pickupRange);
@@ -33,20 +42,28 @@ public class ItemHoldScript : MonoBehaviour
 
                 }
             }
-            else
-            {
-                print("tiputan");
-                DropObject();
-            }
+
             if(heldObj != null)
             {
-                print("liikutan");
-                MoveObect();
+                MoveObject();
+
             }
+
+        if(rightClick.action.IsPressed())
+        {
+            DropObject();
+        }
+
+        if (rightClick.action.IsPressed() && placeObj == true)
+        {
+            DropObject();
+        }
+
+
 
     }
 
-    void MoveObect()
+    void MoveObject()
     {
         if (Vector3.Distance(heldObj.transform.position, holdArea.position) > 0.1f)
         {
@@ -76,7 +93,15 @@ public class ItemHoldScript : MonoBehaviour
 
             heldObjRB.transform.parent = null;
             heldObj = null;
-
     }
 
+    void PlaceObject()
+    {
+        heldObjRB.useGravity = true;
+        heldObjRB.constraints = RigidbodyConstraints.None;
+        heldObj.transform.position = placement1.transform.position;
+        heldObjRB.transform.parent = null;
+        heldObj = null;
+        
+    }
 }
