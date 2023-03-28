@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Puzzle1 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject reward1;
+    public GameObject object1;
 
-    // Update is called once per frame
-    void Update()
+
+    private void OnCollisionEnter(Collision other)
     {
-        
+        if (other.gameObject.tag == "puzzle1")
+        {
+            print("Sait aseen osan");
+            reward1.SetActive(true);
+            object1.SetActive(false);
+
+
+
+        }
     }
 }
