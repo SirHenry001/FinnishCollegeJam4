@@ -20,6 +20,9 @@ public class ItemHoldScript : MonoBehaviour
 
         if (inputs.click)
         {
+
+            print("painan nappia klik");
+            
             if(heldObj == null)
             {
                 RaycastHit hit;
@@ -28,16 +31,20 @@ public class ItemHoldScript : MonoBehaviour
                     //pickup our object
                     PickupObject(hit.transform.gameObject);
                     Debug.Log(pickupRange);
+                    print("nostan esineen");
                 }
             }
             else
             {
+                print("tiputan");
                 DropObject();
             }
             if(heldObj != null)
             {
+                print("liikutan");
                 MoveObect();
             }
+            
         }
     }
 
@@ -74,4 +81,5 @@ public class ItemHoldScript : MonoBehaviour
             heldObj = null;
 
     }
+
 }

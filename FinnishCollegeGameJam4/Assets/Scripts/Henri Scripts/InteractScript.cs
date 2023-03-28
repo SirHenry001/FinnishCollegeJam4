@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class InteractScript : MonoBehaviour
 {
+
+    public LayerMask layerMask;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +16,17 @@ public class InteractScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            Debug.Log("Did Hit");
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+            Debug.Log("Did not Hit");
+        }
     }
 }
