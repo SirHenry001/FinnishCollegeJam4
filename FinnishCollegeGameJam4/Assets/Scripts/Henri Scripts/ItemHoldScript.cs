@@ -18,20 +18,19 @@ public class ItemHoldScript : MonoBehaviour
     private void Update()
     {
 
-        if (inputs.click)
-        {
 
-            print("painan nappia klik");
-            
             if(heldObj == null)
             {
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward),out hit, pickupRange))
                 {
-                    //pickup our object
-                    PickupObject(hit.transform.gameObject);
-                    Debug.Log(pickupRange);
-                    print("nostan esineen");
+                    if(inputs.click)
+                    {
+                        PickupObject(hit.transform.gameObject);
+                        Debug.Log(pickupRange);
+                        print("nostan esineen");
+                    }
+
                 }
             }
             else
@@ -44,8 +43,7 @@ public class ItemHoldScript : MonoBehaviour
                 print("liikutan");
                 MoveObect();
             }
-            
-        }
+
     }
 
     void MoveObect()
@@ -65,7 +63,6 @@ public class ItemHoldScript : MonoBehaviour
             heldObjRB.useGravity = false;
             heldObjRB.drag = 10;
             heldObjRB.constraints = RigidbodyConstraints.FreezeRotation;
-
             heldObjRB.transform.parent = holdArea;
             heldObj = pickObj;
         }
