@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - puzzle1
+  - object 1
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - 
   - Character
   - Ground
-  - 
-  - 
+  - Interact
+  - pickup
   - 
   - 
   - 
