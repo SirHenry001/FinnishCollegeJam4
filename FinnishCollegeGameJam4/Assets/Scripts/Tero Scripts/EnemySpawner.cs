@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    private float startDelay = 2.0f;
+    
     public GameObject enemy;
     private float targetTime;
 
