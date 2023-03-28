@@ -14,7 +14,8 @@ public class ItemHoldScript : MonoBehaviour
     [SerializeField] private float pickupRange = 5.0f;
     [SerializeField] private float pickupForce = 150.0f;
 
-    public bool placeObj;
+    public bool placeObj1;
+    public bool placeObj2;
 
     public GameObject placement1;
     public GameObject placement2;
@@ -35,6 +36,7 @@ public class ItemHoldScript : MonoBehaviour
                 {
                     if(leftClick.action.IsPressed())
                     {
+                        
                         PickupObject(hit.transform.gameObject);
                         Debug.Log(pickupRange);
                         print("nostan esineen");
@@ -54,7 +56,7 @@ public class ItemHoldScript : MonoBehaviour
             DropObject();
         }
 
-        if (rightClick.action.IsPressed() && placeObj == true)
+        if (rightClick.action.IsPressed() && placeObj1 == true)
         {
             DropObject();
         }
@@ -65,6 +67,7 @@ public class ItemHoldScript : MonoBehaviour
 
     void MoveObject()
     {
+
         if (Vector3.Distance(heldObj.transform.position, holdArea.position) > 0.1f)
         {
             Vector3 moveDirection = (holdArea.position - heldObj.transform.position);
@@ -82,6 +85,7 @@ public class ItemHoldScript : MonoBehaviour
             heldObjRB.constraints = RigidbodyConstraints.FreezeRotation;
             heldObjRB.transform.parent = holdArea;
             heldObj = pickObj;
+            heldObj.transform.rotation = Quaternion.identity;
         }
     }
 

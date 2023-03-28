@@ -12,14 +12,14 @@ public class PuzzleScript3 : MonoBehaviour
         if(collision.gameObject.tag == "Object3")
         {
             print("OIKEINNNNN");
-            hold.placeObj = true;
+            hold.placeObj1 = true;
 
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        hold.placeObj = false;
+        hold.placeObj1 = false;
     }
 
     // Start is called before the first frame update

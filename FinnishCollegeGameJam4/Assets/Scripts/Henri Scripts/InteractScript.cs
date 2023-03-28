@@ -11,10 +11,15 @@ public class InteractScript : MonoBehaviour
     public LayerMask layerMask;
     public float rayCastLenght = 5f;
 
+    public GameObject Puzzle1InfoBox;
+    public GameObject Puzzle2InfoBox;
+
     public SciprtUI ui;
+    public GameManager gameManager;
+    public ItemHoldScript hold;
 
     //public StarterAssets.StarterAssetsInputs inputs;
-    [SerializeField] private InputActionReference interact;
+    [SerializeField] private InputActionReference interact,submit,skip;
     //public InputAction controls;
 
     // Start is called before the first frame update
@@ -33,17 +38,36 @@ public class InteractScript : MonoBehaviour
 
         if (interact.action.IsPressed() && canInteract1)
         {
-            StartCoroutine("HintOnButtonPress");
+            HintOnButtonPress();
         }
 
         if (interact.action.IsPressed() && canInteract2)
         {
-            StartCoroutine("HintOn2ButtonPress");
+            HintOn2ButtonPress();
         }
 
         if (interact.action.IsPressed() && canInteract3)
         {
-            StartCoroutine("HintOn3ButtonPress");
+            HintOn3ButtonPress();
+        }
+
+        if (submit.action.IsPressed())
+        {
+            ui.hintText1off();
+            ui.hintText2off();
+            ui.bodyTextoff();
+            Time.timeScale = 1f;
+        }
+
+        
+
+
+        if (submit.action.IsPressed() && hold.placeObj1 == true && hold.placeObj2 == true)
+        {
+            ui.hintText2off();
+            Time.timeScale = 1f;
+            gameManager.Puzzle2();
+            Puzzle2InfoBox.GetComponent<Collider>().enabled = false;
         }
 
 
@@ -94,14 +118,14 @@ public class InteractScript : MonoBehaviour
         if ((Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 2.5f, layerMask)) && (hit.transform.gameObject.tag == "puzzle3"))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-            InteractInfo();
+            InteractInfo2();
             canInteract3 = true;
         }
 
         else
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 2.5f, Color.red);
-            InteractInfo();
+            InteractInfo2();
             canInteract3 = false;
         }
     }
@@ -110,30 +134,35 @@ public class InteractScript : MonoBehaviour
 
     public void InteractInfo()
     {
-        if(canInteract1 == true || canInteract2 ==true || canInteract3 ==true)
+        if(canInteract1 == true || canInteract2 ==true)
         {ui.InteractTextOn();}
         else
         {ui.InteractTextOff();}
     }
-    public IEnumerator HintOnButtonPress()
+
+    public void InteractInfo2()
+    {
+        if (canInteract3 == true)
+        { ui.BodyTextOn(); }
+        else
+        { ui.BodyTextOff(); }
+    }
+    public void HintOnButtonPress()
     {
         ui.hintText1On();
-        yield return new WaitForSeconds(2f);
-        ui.hintText1off();
+        Time.timeScale = 0f;
     }
 
-    public IEnumerator HintOn2ButtonPress()
+    public void HintOn2ButtonPress()
     {
         ui.hintText2On();
-        yield return new WaitForSeconds(2f);
-        ui.hintText2off();
+        Time.timeScale = 0f;
     }
 
-    public IEnumerator HintOn3ButtonPress()
+    public void HintOn3ButtonPress()
     {
         ui.bodyTextOn();
-        yield return new WaitForSeconds(2f);
-        ui.bodyTextoff();
+        Time.timeScale = 0f;
     }
 
 

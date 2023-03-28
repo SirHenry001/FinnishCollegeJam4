@@ -9,6 +9,7 @@ public class SciprtUI : MonoBehaviour
     public GameObject hintText2;
 
     public GameObject interactText;
+    public GameObject interactText2;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,11 @@ public class SciprtUI : MonoBehaviour
     { interactText.SetActive(true); }
     public void InteractTextOff()
     { interactText.SetActive(false); }
+
+    public void BodyTextOn()
+    { interactText2.SetActive(true); }
+    public void BodyTextOff()
+    { interactText2.SetActive(false); }
 
     public void bodyTextOn()
     { bodyText.SetActive(true); }

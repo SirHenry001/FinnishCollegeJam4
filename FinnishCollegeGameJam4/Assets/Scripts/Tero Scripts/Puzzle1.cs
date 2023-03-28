@@ -15,9 +15,6 @@ public class Puzzle1 : MonoBehaviour
             print("Sait aseen osan");
             reward1.SetActive(true);
             object1.SetActive(false);
-
-
-
         }
     }
 }

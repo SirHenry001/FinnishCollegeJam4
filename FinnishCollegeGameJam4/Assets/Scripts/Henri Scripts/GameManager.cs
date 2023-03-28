@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public int puzzleTaskCount = 0;
+
     public bool puzzle1Compeleted;
     public bool puzzle2Compeleted;
 
@@ -24,10 +24,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-
-        Puzzle1();
-        Puzzle2();
-        
         if(puzzle1Compeleted == true && puzzle2Compeleted == true)
         {
             Destroy(prize.gameObject);
@@ -37,20 +33,14 @@ public class GameManager : MonoBehaviour
 
     public void Puzzle1()
     {
-        //puzzle 1 success!
-        if (puzzleTaskCount == 4)
-        {
-            light2.GetComponent<Renderer>().material.color = Color.green;
-        }
+        light2.GetComponent<Renderer>().material.color = Color.green;
     }
 
     public void Puzzle2()
     {
-        //puzzle 2 success!
-        if (puzzleTaskCount == 4)
-        {
+
             light2.GetComponent<Renderer>().material.color = Color.green;
             puzzle2Compeleted = true;
-        }
+
     }
 }
