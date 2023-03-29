@@ -13,6 +13,8 @@ TagManager:
   - Object2
   - Object3
   - Enemy
+  - bookcollision
+  - collisionfail
   layers:
   - Default
   - TransparentFX

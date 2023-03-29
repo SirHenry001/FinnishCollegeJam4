@@ -17,6 +17,11 @@ public class InteractScript : MonoBehaviour
     public SciprtUI ui;
     public GameManager gameManager;
     public ItemHoldScript hold;
+    public BookPuzzle bookPuzzle;
+
+    public GameObject bookSpawn;
+    public GameObject books;
+    public GameObject booksORG;
 
     //public StarterAssets.StarterAssetsInputs inputs;
     [SerializeField] private InputActionReference interact,submit,skip;
@@ -25,7 +30,7 @@ public class InteractScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        bookPuzzle = GameObject.Find("PUZZLE1OBECTS").GetComponent<BookPuzzle>();
     }
 
     // Update is called once per frame
@@ -68,6 +73,27 @@ public class InteractScript : MonoBehaviour
             Time.timeScale = 1f;
             gameManager.Puzzle2();
             Puzzle2InfoBox.GetComponent<Collider>().enabled = false;
+        }
+
+        if (submit.action.IsPressed() && bookPuzzle.book1Out == true && bookPuzzle.book2Out == true && bookPuzzle.failCount >= 0)
+        {
+            ui.hintText1off();
+            Time.timeScale = 1f;
+            gameManager.Puzzle1();
+            Puzzle1InfoBox.GetComponent<Collider>().enabled = false;
+        }
+
+        if (submit.action.IsPressed() && bookPuzzle.failCount < 0)
+        {
+            Destroy(booksORG.gameObject);
+            ui.hintText1off();
+            Time.timeScale = 1f;
+
+            Destroy(books.gameObject);
+   
+            Instantiate(books, bookSpawn.transform.position, bookSpawn.transform.rotation);
+            bookPuzzle.failCount = 0;
+
         }
 
 
