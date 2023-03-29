@@ -12,6 +12,7 @@ TagManager:
   - Object1
   - Object2
   - Object3
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -25,8 +26,8 @@ TagManager:
   - Ground
   - Interact
   - pickup
-  - 
-  - 
+  - enemy
+  - bullet
   - 
   - 
   - 
