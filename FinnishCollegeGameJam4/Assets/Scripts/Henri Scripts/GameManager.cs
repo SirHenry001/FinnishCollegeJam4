@@ -33,7 +33,8 @@ public class GameManager : MonoBehaviour
 
     public void Puzzle1()
     {
-        light2.GetComponent<Renderer>().material.color = Color.green;
+        light1.GetComponent<Renderer>().material.color = Color.green;
+        puzzle1Compeleted = true;
     }
 
     public void Puzzle2()

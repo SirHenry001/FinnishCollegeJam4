@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreenScript : MonoBehaviour
 {
+
+    public GameObject controlText;
+    public GameObject BackButton;
+    public GameObject jamText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +26,17 @@ public class TitleScreenScript : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void ControlsOn()
+    {
+
+    }
+
+    public void ControlsOff()
+    {
+
+    }
+
     public void Exit()
     {
         Application.Quit();
