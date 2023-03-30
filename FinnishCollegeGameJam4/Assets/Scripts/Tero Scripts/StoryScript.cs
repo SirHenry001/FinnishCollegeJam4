@@ -14,7 +14,8 @@ public class StoryScript : MonoBehaviour
     public GameObject Text2;
     public GameObject Text3;
     public GameObject Text4;
-    
+    public GameObject Text5;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +33,10 @@ public class StoryScript : MonoBehaviour
         Text3.SetActive(true);
         yield return new WaitForSecondsRealtime(4f);
         Text4.SetActive(true);
-        yield return new WaitForSecondsRealtime(6f);
-        SceneManager.LoadScene(2);
+        yield return new WaitForSecondsRealtime(5f);
+        Text5.SetActive(true);
+        yield return new WaitForSecondsRealtime(10f);
+        //SceneManager.LoadScene(2);
 
     }
 

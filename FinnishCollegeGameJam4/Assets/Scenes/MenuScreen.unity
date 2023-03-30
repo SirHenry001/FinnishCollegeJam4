@@ -501,6 +501,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlText: {fileID: 1187405920}
   backButton: {fileID: 1937070702}
+  startButton: {fileID: 1932094204}
+  controlButton: {fileID: 1483361632}
+  quitButton: {fileID: 2008215889}
   jamText: {fileID: 364530118}
 --- !u!1 &813785624
 GameObject:
