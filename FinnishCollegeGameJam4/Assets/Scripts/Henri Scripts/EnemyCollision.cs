@@ -6,6 +6,7 @@ public class EnemyCollision : MonoBehaviour
 {
 
     public ShootMenu shootMenu;
+    public Level2Script level2;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,6 +14,7 @@ public class EnemyCollision : MonoBehaviour
         {
             Time.timeScale = 0;
             shootMenu.GameOver();
+            level2.gameOverText.gameObject.SetActive(true);
             
         }
     }
@@ -20,5 +22,6 @@ public class EnemyCollision : MonoBehaviour
     private void Start()
     {
         shootMenu = GameObject.Find("GAMEOVERCANVAS").GetComponent<ShootMenu>();
+        level2 = GameObject.Find("Level2Manager").GetComponent<Level2Script>();
     }
 }

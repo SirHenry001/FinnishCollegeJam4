@@ -277,8 +277,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22, y: -74}
-  m_SizeDelta: {x: 1300, y: 50}
+  m_AnchoredPosition: {x: 36.348938, y: -110}
+  m_SizeDelta: {x: 544.187, y: 61.2991}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &739662887
 Animator:
@@ -324,8 +324,9 @@ MonoBehaviour:
   m_text: "It\u2019s a very powerful gun so we keep it in safe. Solve the puzzles
     to get that gun. You are our only hope so good Luck!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cc6c818fbb57bc64c9d22f8154b19c7e, type: 2}
+  m_sharedMaterial: {fileID: -3784869221809693681, guid: cc6c818fbb57bc64c9d22f8154b19c7e,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -349,8 +350,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -560,8 +561,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -119, y: 14}
-  m_SizeDelta: {x: 1100, y: 50}
+  m_AnchoredPosition: {x: -4.255829, y: -34.360035}
+  m_SizeDelta: {x: 460.4658, y: 61.2991}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1520669938
 MonoBehaviour:
@@ -586,8 +587,9 @@ MonoBehaviour:
   m_text: 'We need your help! Go to the Orb and let the time flow free again. You
     need a magic gun for that. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cc6c818fbb57bc64c9d22f8154b19c7e, type: 2}
+  m_sharedMaterial: {fileID: -3784869221809693681, guid: cc6c818fbb57bc64c9d22f8154b19c7e,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -611,8 +613,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -718,8 +720,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -122, y: 203}
-  m_SizeDelta: {x: 1100, y: 50}
+  m_AnchoredPosition: {x: -5.511627, y: 114.68207}
+  m_SizeDelta: {x: 460.4658, y: 61.2991}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1621988510
 MonoBehaviour:
@@ -743,8 +745,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Once there were time when\u2026 well, once there were time. "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cc6c818fbb57bc64c9d22f8154b19c7e, type: 2}
+  m_sharedMaterial: {fileID: -3784869221809693681, guid: cc6c818fbb57bc64c9d22f8154b19c7e,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -768,8 +771,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -943,8 +946,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -116, y: 99}
-  m_SizeDelta: {x: 1100, y: 50}
+  m_AnchoredPosition: {x: -3, y: 19}
+  m_SizeDelta: {x: 460.4658, y: 61.2991}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1724645037
 MonoBehaviour:
@@ -966,10 +969,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: to do so they need to freeze time to get time for themselves.
+  m_text: and to do so they need to freeze time to get time for themselves.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cc6c818fbb57bc64c9d22f8154b19c7e, type: 2}
+  m_sharedMaterial: {fileID: -3784869221809693681, guid: cc6c818fbb57bc64c9d22f8154b19c7e,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -993,8 +997,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1228,7 +1232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1343,8 +1347,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -222, y: 146}
-  m_SizeDelta: {x: 900, y: 50}
+  m_AnchoredPosition: {x: -47.37216, y: 61}
+  m_SizeDelta: {x: 376.7449, y: 61.2991}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2014004548
 MonoBehaviour:
@@ -1366,10 +1370,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Time Thieves has come to steal time and '
+  m_text: Time Thieves has come to steal time...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cc6c818fbb57bc64c9d22f8154b19c7e, type: 2}
+  m_sharedMaterial: {fileID: -3784869221809693681, guid: cc6c818fbb57bc64c9d22f8154b19c7e,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1393,8 +1398,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1429,7 +1434,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -36.808777, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

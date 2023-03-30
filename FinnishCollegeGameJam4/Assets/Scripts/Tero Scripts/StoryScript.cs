@@ -20,6 +20,7 @@ public class StoryScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
         StartCoroutine(HitStop());
     }
 
@@ -35,8 +36,8 @@ public class StoryScript : MonoBehaviour
         Text4.SetActive(true);
         yield return new WaitForSecondsRealtime(5f);
         Text5.SetActive(true);
-        yield return new WaitForSecondsRealtime(10f);
-        //SceneManager.LoadScene(2);
+        yield return new WaitForSecondsRealtime(5f);
+        SceneManager.LoadScene(2);
 
     }
 
