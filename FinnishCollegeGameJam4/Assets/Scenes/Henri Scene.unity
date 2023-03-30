@@ -17741,9 +17741,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "darn it, i got betrayed \r \nby my men, they were time stealers\r.\ni
-    was gonna take the gun,\r\nbut they got to me first\r.\nIt is the only gun that
-    can defeat time stealers\r.\ntime is running out and clock is ticking"
+  m_text: "darn it, i got betrayed \r \nby my men, they were time thieves\r.\ni was
+    gonna take the gun,\r\nbut they got to me first\r.\nIt is the only gun that can
+    defeat time thieves\r.\ntime is running out and clock is ticking"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cc6c818fbb57bc64c9d22f8154b19c7e, type: 2}
   m_sharedMaterial: {fileID: -3784869221809693681, guid: cc6c818fbb57bc64c9d22f8154b19c7e,

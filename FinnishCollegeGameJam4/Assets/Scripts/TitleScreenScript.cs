@@ -11,6 +11,7 @@ public class TitleScreenScript : MonoBehaviour
     public GameObject startButton;
     public GameObject controlButton;
     public GameObject quitButton;
+    public GameObject devText;
     public GameObject jamText;
 
     // Start is called before the first frame update
@@ -35,6 +36,7 @@ public class TitleScreenScript : MonoBehaviour
     {
         controlText.SetActive(true);
         jamText.SetActive(false);
+        devText.SetActive(false);
         backButton.SetActive(true);
         startButton.SetActive(false);
         controlButton.SetActive(false);
@@ -46,6 +48,7 @@ public class TitleScreenScript : MonoBehaviour
     {
         controlText.SetActive(false);
         backButton.SetActive(false);
+        devText.SetActive(true);
         jamText.SetActive(true);
         startButton.SetActive(true);
         controlButton.SetActive(true);
