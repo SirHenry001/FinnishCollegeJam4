@@ -21,9 +21,15 @@ public class ShootingScript : MonoBehaviour
     {
         if(shoot.action.IsInProgress())
         {
-            Instantiate(bullet, transform.position, transform.rotation);
+            InvokeRepeating("Shoot", 0f, 1f);
+            
         }
 
 
+    }
+
+    public void Shoot()
+    {
+        Instantiate(bullet, transform.position, transform.rotation);
     }
 }
