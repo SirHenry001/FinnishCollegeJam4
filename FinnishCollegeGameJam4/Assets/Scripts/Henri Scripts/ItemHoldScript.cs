@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class ItemHoldScript : MonoBehaviour
 {
@@ -21,9 +22,17 @@ public class ItemHoldScript : MonoBehaviour
     public GameObject placement2;
     public GameObject placement3;
 
+    public GameObject floor;
+    public GameObject getReadyText;
+
     [SerializeField] private InputActionReference leftClick, rightClick;
 
     public LayerMask layerMask;
+
+    private void Start()
+    {
+        heldObj = null;
+    }
 
     private void Update()
     {
@@ -32,7 +41,7 @@ public class ItemHoldScript : MonoBehaviour
             if(heldObj == null)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward),out hit, pickupRange, layerMask))
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward),out hit, pickupRange, layerMask) && (hit.transform.gameObject.tag != "gun"))
                 {
                     if(leftClick.action.IsPressed())
                     {
@@ -45,7 +54,24 @@ public class ItemHoldScript : MonoBehaviour
                 }
             }
 
-            if(heldObj != null)
+        if (heldObj == null)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickupRange, layerMask) && (hit.transform.gameObject.tag == "gun"))
+            {
+                if (leftClick.action.IsPressed())
+                {
+
+                    PickupObject(hit.transform.gameObject);
+                    print("KENTTÄ LÄPI!!!!!");
+                    StartCoroutine("LevelChange");
+
+                }
+
+            }
+        }
+
+        if (heldObj != null)
             {
                 MoveObject();
 
@@ -107,5 +133,16 @@ public class ItemHoldScript : MonoBehaviour
         heldObjRB.transform.parent = null;
         heldObj = null;
         
+    }
+
+    public IEnumerator LevelChange()
+    {
+        Destroy(floor);
+        Time.timeScale = 0.5f;
+        yield return new WaitForSeconds(2f);
+        getReadyText.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(3);
     }
 }

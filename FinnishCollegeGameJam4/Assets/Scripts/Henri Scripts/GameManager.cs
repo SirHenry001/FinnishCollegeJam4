@@ -13,11 +13,12 @@ public class GameManager : MonoBehaviour
     public GameObject light2;
 
     public GameObject prize;
+    public GameObject gun;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
         if(puzzle1Compeleted == true && puzzle2Compeleted == true)
         {
             Destroy(prize.gameObject);
+            gun.SetActive(true);
         }
 
     }
